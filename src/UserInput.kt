@@ -11,12 +11,12 @@ fun main (args: Array<String>){
 //    val userNumber = userInput.toIntOrNull() ?: 0
 //    println("Your number multiplied by 5 is ${userNumber * 5}")
 
-    println("What is your birth year?")
-    val userInput = readLine()?:""
-    val birthYear = userInput.toIntOrNull() ?: 0
-    val currentYear = 2025
-    val age = currentYear - birthYear
-    println("You are $age years old.")
+//    println("What is your birth year?")
+//    val userInput = readLine()?:""
+//    val birthYear = userInput.toIntOrNull() ?: 0
+//    val currentYear = 2025
+//    val age = currentYear - birthYear
+//    println("You are $age years old.")
 
     // RANDOM NUMBER
 //    println(Random.nextInt())
