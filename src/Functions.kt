@@ -1,22 +1,29 @@
 fun main (args: Array<String>){
-//    for(i in 1..3){
-//        sayHello()
-//    }
-//
-//    for(j in 1..2){
-//        multiplyNumber()
-//    }
+    for(i in 1..3){
+        sayHello()
+    }
 
-//    for (k in 1..3){
-//        double(k)
-//    }
+    for(j in 1..2){
+        multiplyNumber()
+    }
 
-//    val persons = listOf("Alice", "Bob", "Charlie")
-//    sayHelloToPersons(persons)
+    for (k in 1..3){
+        double(k)
+    }
+
+    val persons = listOf("Alice", "Bob", "Charlie")
+    sayHelloToPersons(persons)
 
     doubleMessage(5)
     doubleMessage(10, "The double value is ")
+
+    println(multiply(4))
+    println(multiply(4, 5))
 }
+
+fun multiply(number: Int) = number * 2
+
+fun multiply(number: Int, multiplier: Int) = number * multiplier
 
 fun doubleMessage(number: Int, message: String = "Double is ") {
     println("$message ${number * 2}")
