@@ -22,13 +22,31 @@ fun main (args: Array<String>){
 
     println(newClients)
 
-    val plants: ArrayList<String> = arrayListOf("Cactus", "Fern", "Bamboo", "Palm")
+    val plants: ArrayList<String> = arrayListOf("Cactus", "Fern", "Bamboo", "Palm", "Moss", "Pine", "Tulip", "Rose", "Daisy", "Orchid")
     plants.sortBy { it.length }
     plants.forEach { println(it + " is number ${ Random.nextInt(plants.size)}") }
 
     var plantLength: ArrayList<Int> = plants.map{ it.length } as ArrayList
     println(plantLength)
     println(plants)
+
+    var max = plants.maxByOrNull { it.length }
+    println("The longest plant name is $max")
+
+    var min = plants.minByOrNull { it.length }
+    println("The shortest plant name is $min")
+
+
+//    practice
+    var numbers: ArrayList<Int> = arrayListOf(1, 2, 3, 37, 70, 4, 4, 5, 6, 7, 8, 9, 10)
+    var doubleDigits = numbers.filter { it in 10..<100 } as ArrayList
+    println(doubleDigits)
+
+    var randomInt: Array<Int> = Array(15) { Random.nextInt(1, 200) }
+    var processedInt = randomInt.map { if (it % 2 == 0) it/2 else it * 2 }
+    println(randomInt.asList())
+    println()
+    println(processedInt.filter { it > 25 })
 }
 
 fun clientsHOF(clients: ArrayList<String>, doSomething: (String) -> String): ArrayList<String> {
