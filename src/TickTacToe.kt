@@ -133,12 +133,12 @@ fun printBoard(){
     for(i in 0..2){
         for(j in 0..2){
             when(board[i][j]){
-                "X" -> print("| X \u001B[31m") // Red color for X
-                "O" -> print("| O \u001B[34m") // Blue color for O
-                else -> print("|   \u001B[0m") // Reset color for empty
+                "X" -> print("\u001B[31m| X \u001B[31m") // Red color for X
+                "O" -> print("\u001B[34m| O \u001B[34m") // Blue color for O
+                else -> print("\u001B[0m|   \u001B[0m") // Reset color for empty
             }
         }
-        println("|  \u001B[0m") // Reset color at the end of the row
+        println("\u001B[0m|   \u001B[0m") // Reset color at the end of the row
         println("-------------")
     }
 }
