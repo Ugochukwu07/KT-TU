@@ -10,6 +10,8 @@ fun main(args: Array<String>){
     val randomKey = Lock.createKey()
     println("Lock opened with random key: ${lock.openLock(randomKey)}")
 
+//    Lock(Lock.createKey())
+
 }
 
 class Key {

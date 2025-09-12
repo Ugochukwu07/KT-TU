@@ -8,14 +8,27 @@ fun main (args: Array<String>) {
 //            println("Total items: ${filteredList.size}")
 //        }
 
-    with(STCar()){
-        speed = 30
-        accelerate()
-        println("Current speed: $speed")
-        applyBrakes()
-        applyBrakes(2)
-        println("Current speed: $speed")
+//    with(STCar()){
+//        speed = 30
+//        accelerate()
+//        println("Current speed: $speed")
+//        applyBrakes()
+//        applyBrakes(2)
+//        println("Current speed: $speed")
+//    }
+
+    var numbers = arrayListOf<Int>(1,2,3,4,5,6,7,8,9,10)
+    println(numbers)
+
+    var evenNumvers = arrayListOf<Int>()
+    var oddNumbers = arrayListOf<Int>()
+    for(number in numbers){
+        number.takeIf { it % 2 == 0 }?.let { evenNumvers.add(it) }
+        number.takeUnless { it % 2 == 0 }?.let { oddNumbers.add(it) }
+
     }
+    println(evenNumvers)
+    println(oddNumbers)
 }
 
 class STCar {
